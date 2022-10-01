@@ -7,7 +7,6 @@ function* workGetCatsFetch() {
   const formattedCatsShortened = formattedCats.slice(0, 10)
   yield put(getCatsSuccess(formattedCatsShortened))
 }
-
 function* catSaga() {
   yield takeEvery("catsSlice/getCatsFetch", workGetCatsFetch)
 }
